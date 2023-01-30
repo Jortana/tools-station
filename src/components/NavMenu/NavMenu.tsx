@@ -1,14 +1,15 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function NavMenu() {
   return (
     <>
       <ul className="menu p-4 text-base-content">
         <li>
-          <a>Sidebar Item 1</a>
+          <Link to={'/instagram'}>Sidebar Item 1</Link>
         </li>
         <li>
-          <a>Sidebar Item 2</a>
+          <Link to={'/test'}>Sidebar Item 2</Link>
         </li>
       </ul>
     </>

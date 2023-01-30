@@ -1,8 +1,8 @@
-import classNames from "classnames";
-import React, { useState } from "react";
-import { Outlet } from "react-router-dom";
+import classNames from 'classnames';
+import React, { useState } from 'react';
+import { Link, Outlet } from 'react-router-dom';
 
-import NavMenu from "@/components/NavMenu/NavMenu";
+import NavMenu from '@/components/NavMenu/NavMenu';
 
 const AppFrame = () => {
   const [isShowMenu, setIsShowMenu] = useState(false); // 移动端侧边栏是否显示
@@ -34,14 +34,16 @@ const AppFrame = () => {
             </button>
           </div>
           <div className="flex-1">
-            <a className="btn btn-ghost normal-case text-xl">Tools Station</a>
+            <Link to={'/'} className="btn btn-ghost normal-case text-xl">
+              Tools Station
+            </Link>
           </div>
         </div>
         <div className="flex relative flex-1">
           <div className="hidden md:block fixed h-full w-48 border-r">
             <NavMenu />
           </div>
-          <div className="flex-1 md:ml-48 overflow-x-auto p-4">
+          <div className="flex-1 md:ml-48 overflow-x-auto px-6 py-4">
             <Outlet />
           </div>
           {/* 移动端侧边栏 */}
@@ -51,19 +53,19 @@ const AppFrame = () => {
                 setIsShowMenu(false);
               }}
               className={classNames(
-                "absolute top-0  h-full bg-neutral transition-opacity",
+                'absolute top-0  h-full bg-neutral transition-opacity',
                 {
-                  "opacity-0 w-0": !isShowMenu,
-                  "opacity-30 w-full": isShowMenu,
+                  'opacity-0 w-0': !isShowMenu,
+                  'opacity-30 w-full': isShowMenu,
                 }
               )}
             ></div>
             <div
               className={classNames(
-                "fixed h-full bg-base-100 overflow-hidden transition",
+                'fixed h-full bg-base-100 overflow-hidden transition',
                 {
-                  "-translate-x-48": !isShowMenu,
-                  "translate-x-0": isShowMenu,
+                  '-translate-x-48': !isShowMenu,
+                  'translate-x-0': isShowMenu,
                 }
               )}
             >

@@ -1,8 +1,8 @@
-import React, { ReactComponentElement } from "react";
-import { Navigate } from "react-router-dom";
+import React, { ReactComponentElement } from 'react';
+import { Navigate } from 'react-router-dom';
 
-import AppFrame from "@/layout/AppFrame";
-import InstagramDownload from "@/pages/InstagramDownload/InstagramDownload";
+import AppFrame from '@/layout/AppFrame';
+import InstagramDownload from '@/pages/InstagramDownload/InstagramDownload';
 
 // 用于显示页面标题和鉴权
 type Props = {
@@ -17,11 +17,11 @@ const TitleAuth = ({ title, children }: Props) => {
 
 const element = [
   {
-    path: "/",
+    path: '/',
     element: <AppFrame />,
     children: [
       {
-        path: "/instagram",
+        path: '/instagram',
         element: (
           <TitleAuth title="Instagram 媒体下载">
             <InstagramDownload />
@@ -29,7 +29,7 @@ const element = [
         ),
       },
       {
-        path: "/",
+        path: '/',
         element: <Navigate to="/instagram" />,
       },
     ],
