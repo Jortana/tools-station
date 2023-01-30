@@ -1,4 +1,5 @@
+import mediaUtils from '@/utils/mediaUtils.ts';
+
 export const getInstagramInfo = (url: string) => {
-  url = url.trim();
-  console.log(url);
+  mediaUtils.getInstagramMedia(url);
 };

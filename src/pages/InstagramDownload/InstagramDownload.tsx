@@ -16,13 +16,13 @@ export default function InstagramDownload() {
         <form className="input-group" onSubmit={handleSubmit}>
           <input
             type="text"
-            placeholder="Search…"
+            placeholder="输入链接..."
             className="input input-bordered flex-1 focus:outline-none"
             onChange={(event) => {
               urlInput.current = event.target.value;
             }}
           />
-          <button className="btn btn-square" type="submit">
+          <button className="btn btn-primary btn-square" type="submit">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
